@@ -1,0 +1,85 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-restaurant-food-menu-background-picture-image_1046420.jpg'); /* Replace 'your_image.jpg' with the path to your image */
+    background-size: cover;
+}
+
+.login-option {
+    width: 200px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Align content to the left */
+    align-items: flex-end; /* Align items to the bottom */
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff; /* Change text color to white */
+    font-weight: bold; /* Add font weight for emphasis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    text-decoration: none; /* Remove underline from anchor */
+    background-position: center bottom; /* Position the background image at the bottom */
+}
+.text-item {
+    position: relative;
+    top: 60px; /* Adjust this value as needed */
+}
+.login-option a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-option:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.login-option:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#owner-login {
+    background-image: url('/images/1654220.png'); 
+    background-size: cover;
+    background-position: center left;
+}
+
+#manager-login {
+    background-image: url('/images/manager.png'); 
+    background-size: cover;
+    background-position: center left;
+}
+
+#employee-login {
+    background-image: url('/images/kalamaris.jpg'); 
+    background-size: cover;
+    background-position: center left;
+}
+
+#customer-login {
+    background-image: url('/images/bot.jpg'); 
+    background-size: cover;
+    background-position: center left;
+}

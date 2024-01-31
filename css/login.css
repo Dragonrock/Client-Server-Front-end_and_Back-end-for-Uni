@@ -1,0 +1,67 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: #fff; /* White background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+    max-width: 400px; /* Limit form width */
+    width: 100%; /* Ensure form fills container */
+}
+
+.login-form:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+    font-size: 24px; /* Larger font size for heading */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 85%;
+    padding: 10px; /* Decrease padding for text box */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 6px;
+    transition: border-color 0.3s ease; /* Add transition for focus effect */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color on focus */
+}
+
+button {
+    width: 70%;
+    padding: 12px; /* Decrease padding for button */
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

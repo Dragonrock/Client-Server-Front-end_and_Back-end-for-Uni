@@ -1,0 +1,415 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://static.vecteezy.com/system/resources/previews/007/817/233/original/businessman-standing-with-setting-icon-on-yellow-background-project-management-and-processing-concept-business-planning-and-strategy-vector.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.welcome-message {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-size: cover;
+    padding: 40px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-30px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+}
+
+.dashboard {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1s;
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: calc(100% - 120px);
+    overflow: auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.manage-button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #c25928; /* Dark gray background */
+    color: #fff; /* White text */
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Arial font */
+}
+
+.manage-button:hover {
+    background-color: #555; /* Slightly lighter gray when hovered */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.manage-button:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.container-line {
+    height: 2px;
+    background: linear-gradient(to right, #007bff, #fff);
+    margin: 20px 0;
+    animation: moveLine 2s infinite;
+}
+
+@keyframes moveLine {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding: 5px 0;
+    }
+
+    .dashboard {
+        padding: 10px;
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .manage-button {
+        padding: 8px;
+    }
+}
+#restaurant-image {
+    max-width: 300px; /* Make the image take up the full width of the container */
+    max-height: 300px; /* Limit the height of the image */
+    object-fit: contain; /* Make the image scale down to fit the container while maintaining its aspect ratio */
+    border: 1px solid #000; /* 1px wide solid black border */
+}
+
+#restaurant-name-details,
+#restaurant-description,
+#restaurant-type,
+#employee-count,
+#menu-item-count {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+#employee-container, #menu-container  {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50%; /* Adjust as needed */
+    height: 100%;
+    overflow: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.scrollable-table {
+    overflow-y: auto;
+    height: 500px; /* Adjust as needed */
+    display: block;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+#employee-container, #menu-container  {
+    position: fixed;
+    right: 60px;
+    top: 100px;
+    width: 56%; /* Adjust as needed */
+    height: 55%;
+    overflow: hidden;
+    background: linear-gradient(to right, #d8d511, #1abb83); /* Gradient background */
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ecf0f1;
+    box-shadow: -10px 10px 30px 0px rgba(0,0,0,0.2); /* Larger shadow for a 3D effect */
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    border-collapse: collapse;
+}
+
+#employee-container:hover, #menu-container:hover {
+    box-shadow: -10px 10px 30px 0px rgba(0,0,0,0.3); /* Darker shadow on hover */
+    transform: scale(1.02); /* Slightly enlarge the container on hover */
+}
+
+#employee-container h1, #menu-container h1 {
+    color: #ecf0f1;
+    font-weight: 500;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Text shadow for a 3D effect */
+}
+
+#employee-container table, #menu-container table {
+    width: 100%;
+    border-collapse: collapse;
+    transition: all 0.3s ease;
+    text-align: center; /* Smooth transition for hover effects */
+}
+
+#employee-container table th, #employee-container table td, 
+#menu-container table th, #menu-container table td {
+    border: 1px solid #ecf0f1;
+    padding: 10px;
+    text-align: left;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#employee-container table th, #menu-container table th {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+#employee-container table tr:nth-child(even), 
+#menu-container table tr:nth-child(even) {
+    background-color: #34495e;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+#employee-container table tr:nth-child(odd), 
+#menu-container table tr:nth-child(odd) {
+    background-color: #2c3e50;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#employee-container table tr:hover, 
+#menu-container table tr:hover {
+    background-color: #1a252f;
+    color: #ecf0f1; /* Change the text color on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+button {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+
+.button_new {
+    /* Existing styles here... */
+    background: linear-gradient(to right, #357a66, #1d976c); /* Gradient background */
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6); /* Increase the size and blur of the shadow for a more 3D effect */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.button_new:hover {
+    background: linear-gradient(to right, #1d976c, #357a66); /* Reverse gradient on hover */
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Darker shadow on hover */
+    transform: translateY(-2px); /* Move the button up slightly on hover */
+}
+
+.button_new:active {
+    transform: translateY(2px); /* Move the button down slightly when clicked */
+} 
+
+#hire-container {
+    position: fixed;
+    top: 82%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #008080, #808080); /* Changed the gradient direction */
+    background-size: 200% 200%;
+    animation: Gradient 3s ease infinite; /* Added bounce animation */
+    z-index: 2;
+}
+
+
+#hire-form label,
+#hire-form input,
+#hire-form select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#hire-form input[type="submit"] {
+    cursor: pointer;
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+#hire-form label {
+    font-weight: bold; /* Make the text bold */
+    color: #ffffff; /* Change the text color to white for better contrast */
+    background: rgba(255, 255, 255, 0.3); /* Add a semi-transparent white background */
+    padding: 5px; /* Add some padding */
+    margin-bottom: 10px; /* Add some space below the label */
+}
+.job-title-select {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #008080, #808080);
+    font-size: 14px;
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+}
+
+.job-title-select:focus {
+    outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-title-select option {
+    padding: 5px;
+    background: #f8f8f8;
+    color: #333;
+}
+
+#add-item-container {
+    display: none;
+    position: fixed;
+    top: 82%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #008080, #808080); /* Changed the gradient direction */
+    background-size: 200% 200%;
+    animation: Gradient 3s ease infinite; /* Added bounce animation */
+    z-index: 2;
+}
+
+#add-item-form label,
+#add-item-form input,
+#add-item-form select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#add-item-form input[type="submit"] {
+    cursor: pointer;
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#add-item-form label {
+    font-weight: bold; /* Make the text bold */
+    color: #ffffff; /* Change the text color to white for better contrast */
+    background: rgba(255, 255, 255, 0.3); /* Add a semi-transparent white background */
+    padding: 5px; /* Add some padding */
+    margin-bottom: 10px; /* Add some space below the label */
+}
+
+.item-select {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #008080, #808080);
+    font-size: 14px;
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+}
+
+.item-select:focus {
+    outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-select option {
+    padding: 5px;
+    background: #f8f8f8;
+    color: #333;
+}
